@@ -1,0 +1,36 @@
+name: Export ECAD
+on:
+  push:
+
+jobs:
+  export-ecad:
+    name: Export ECAD
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad7_auto:1.6.2
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        lfs: true
+
+    - name: Update the PCBs with git hash
+      run: |
+        export COMMIT=$(git rev-parse --short HEAD)
+        echo "COMMIT = ${COMMIT}"    
+        echo "ref: ${{ github.ref }}"
+        echo "default: ${{ env.default }}"
+        sed -i "s!<<hash>>!${COMMIT}!" r2_warpcore_driver.kicad_pcb
+
+    - name: Generate Export Files
+      run: |
+        kibot -c .github/workflows/scripts/kibot/config.kibot.yaml -e r2_warpcore_driver.kicad_sch - b r2_warpcore_driver.kicad_pck -d r2_warpcore_driver
+        zip -r -k r2_warpcore_driver.zip r2_warpcore_driver
+
+    - name: Upload Export Files as Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: r2_warpcore_driver.zip
+        path: r2_warpcore_driver.zip
+        if-no-files-found: error
+        retention-days: 60
+    
