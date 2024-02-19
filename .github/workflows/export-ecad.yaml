@@ -16,7 +16,7 @@ jobs:
         git lfs install
 
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         lfs: true
 
@@ -38,7 +38,7 @@ jobs:
           dir: r2_warpcore_driver
 
     - name: Upload Export Files as Artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: r2_warpcore_driver
         path: r2_warpcore_driver
