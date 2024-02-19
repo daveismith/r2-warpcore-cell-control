@@ -2524,8 +2524,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 27d7b902-83a5-41c2-86f4-f9e5e31d42c1)
   )
-  (text "Needs:\nx drive motor control\nx pinout for ESP programming\nx support for driving 3 servos (with selectable drive voltage)\nx support for switching on/off laser (7.5 v)\nx support for switching on/off fans (12v)\nx support for RGB LED\nx support for switching on / fog machine (5V 2A?)\nx support for switching on / off strobe (12V)\nx pinout for serial comms?\nx buttons for reset & boot\nx support to read linear actuator position (on ARDS)\nx one wire for slot id\n\nLauncher:\nx No FETS, Just 2 servos\n\nShort Circuit\nx 3x FETS (smoker, lights, fans)\n\nARDS\nx 2x FETS (individual laser control)\nx 1x FET for possible LED\n\n\nESP32-S3-MINI-1:\n- don't use IO26 (connects to PSRAM on -N4R2)\n\nTODO:\n- Resistor Values for RGB LED\n- JLCPCB Parts"
-    (at 199.39 76.835 0)
+  (text "Needs:\nx drive motor control\nx pinout for ESP programming\nx support for driving 3 servos (with selectable drive voltage)\nx support for switching on/off laser (7.5 v)\nx support for switching on/off fans (12v)\nx support for RGB LED\nx support for switching on / fog machine (5V 2A?)\nx support for switching on / off strobe (12V)\nx pinout for serial comms?\nx buttons for reset & boot\nx support to read linear actuator position (on ARDS)\nx one wire for slot id\n\nLauncher:\nx No FETS, Just 2 servos\n\nShort Circuit\nx 3x FETS (smoker, lights, fans)\n\nARDS\nx 2x FETS (individual laser control)\nx 1x FET for possible LED\n\n\nESP32-S3-MINI-1:\n- don't use IO26 (connects to PSRAM on -N4R2)\n\nTODO:\n- Resistor Values for RGB LED\n- JLCPCB Parts\n- USB diodes?"
+    (at 203.2 81.915 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 63eb752c-e6e9-4ee1-b886-78a082a29127)
   )
