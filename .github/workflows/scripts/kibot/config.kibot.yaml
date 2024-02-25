@@ -36,8 +36,7 @@ preflight:
   # Disable ERC for now while GPereira updates these items.
   run_erc: false
   update_xml: true
-  # Disable DRC for now while GPereira updates these items.
-  run_drc: false
+  run_drc: true
   check_zone_fills: true
   ignore_unconnected: false
 
@@ -123,6 +122,10 @@ outputs:
       # When Moving to Four Layer, Set G2L and G3L as the suffixes
       - layer: F.Cu
         suffix: GTL
+      - layer: In1.Cu
+        suffix: G2L
+      - layer: In2.Cu
+        suffix: G3L
       - layer: B.Cu
         suffix: GBL
       - layer: F.SilkS
