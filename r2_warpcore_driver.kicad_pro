@@ -176,7 +176,8 @@
         0.127,
         0.254,
         0.508,
-        0.762
+        0.762,
+        1.27
       ],
       "via_dimensions": [
         {
@@ -464,8 +465,8 @@
     "netclass_assignments": {
       "+12V": "High Current",
       "+5V": "High Current",
-      "/D+": "USB Data",
-      "/D-": "USB Data",
+      "/usb/USB_N": "USB Data",
+      "/usb/USB_P": "USB Data",
       "SERVOA_V+": "Servo Power",
       "SERVOB_V+": "Servo Power"
     },
@@ -532,6 +533,10 @@
     [
       "9982f9e9-51bf-4933-9da9-61f332bce481",
       "power"
+    ],
+    [
+      "a20d98c7-34c9-4f45-b4a7-0192d690b30b",
+      "usb"
     ]
   ],
   "text_variables": {}
